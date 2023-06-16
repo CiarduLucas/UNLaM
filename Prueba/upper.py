@@ -13,10 +13,11 @@ def num(archivo, archivo2):
     formacion = archivo_yml.readlines()
     formacion_upper = []
     archivo_yml.close()
+
     for text in formacion:
         text = f'{text[0:2].upper().strip()}'
         formacion_upper.append(f'{text}\n')
-    print(formacion_upper)
+        
     write_lines(archivo2, formacion_upper )
 
 def write_lines(archivo, formacion):
